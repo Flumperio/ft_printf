@@ -6,7 +6,7 @@
 /*   By: jcsantos <jcsantos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/13 10:09:47 by juasanto          #+#    #+#             */
-/*   Updated: 2021/01/11 13:00:42 by jcsantos         ###   ########.fr       */
+/*   Updated: 2021/01/11 16:40:33 by jcsantos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,8 +65,7 @@ char	*fn_print_chk_iud(t_parms *prn, char *temp, int int_temp,
 	return (temp);
 }
 
-char	*fn_print_chk_xp(t_parms *prn, char *temp, int int_temp,
-							long long int uint_temp)
+char	*fn_print_chk_xp(t_parms *prn, char *temp, long long int uint_temp)
 {
 	if (prn->current_format == 'p')
 		uint_temp = va_arg(prn->args, unsigned long int);

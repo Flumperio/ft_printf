@@ -6,7 +6,7 @@
 /*   By: jcsantos <jcsantos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/19 09:55:21 by juasanto          #+#    #+#             */
-/*   Updated: 2021/01/07 12:48:19 by jcsantos         ###   ########.fr       */
+/*   Updated: 2021/01/11 17:44:11 by jcsantos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,9 +45,8 @@ void	fn_inicialize(t_parms *prn)
 	prn->current_size = 0;
 	prn->current_pre = 0;
 	prn->string = NULL;
-	prn->print_string = NULL;
-	prn->format_type = "scCdDiuUoOxXbp%";
-	prn->flags_type = "-+ 0#";
+	prn->format_type = "scdiuUxXp%";
+	prn->flags_type = "-+0#";
 	prn->current_align = 0;
 	prn->current_sign = 0;
 	prn->current_space = 0;

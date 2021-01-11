@@ -6,7 +6,7 @@
 /*   By: jcsantos <jcsantos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/05 11:18:05 by juasanto          #+#    #+#             */
-/*   Updated: 2021/01/11 12:59:54 by jcsantos         ###   ########.fr       */
+/*   Updated: 2021/01/11 17:33:15 by jcsantos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,8 +73,8 @@ void			fn_printx(t_parms *prn);
 void			fn_print_chk_s(t_parms *prn);
 char			*fn_print_chk_iud(t_parms *prn, char *temp, int int_temp,
 				long long int uint_temp);
-char			*fn_print_chk_xp(t_parms *prn, char *temp, int int_temp,
-				long long int uint_temp);
+char			*fn_print_chk_xp(t_parms *prn, char *temp,
+								long long int uint_temp);
 void			fn_print_chk_c(t_parms *prn);
 int				check_flags1(t_parms *prn);
 int				check_flags2(t_parms *prn);

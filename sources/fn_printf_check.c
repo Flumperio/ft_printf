@@ -6,7 +6,7 @@
 /*   By: jcsantos <jcsantos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/01 12:40:53 by juasanto          #+#    #+#             */
-/*   Updated: 2021/01/11 13:02:24 by jcsantos         ###   ########.fr       */
+/*   Updated: 2021/01/11 17:44:06 by jcsantos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int		fn_check_print(t_parms *prn)
 		temp = fn_print_chk_iud(prn, temp, int_temp, uint_temp);
 	else if (prn->current_format == 'x' || prn->current_format == 'X' ||
 			prn->current_format == 'p')
-		temp = fn_print_chk_xp(prn, temp, int_temp, uint_temp);
+		temp = fn_print_chk_xp(prn, temp, uint_temp);
 	else if (prn->current_format == 'c' || prn->current_format == '%')
 		fn_print_chk_c(prn);
 	free(temp);
