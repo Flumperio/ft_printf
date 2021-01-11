@@ -6,7 +6,7 @@
 #    By: jcsantos <jcsantos@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/01/16 12:28:00 by fballest          #+#    #+#              #
-#    Updated: 2021/01/08 13:18:55 by jcsantos         ###   ########.fr        #
+#    Updated: 2021/01/11 12:08:19 by jcsantos         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -58,6 +58,7 @@ clean:
 		@make -C $(LIB_DIR) clean
 fclean: clean
 		@$(RM) $(NAME)
+		@$(RM) ft_printf.out
 		@make -C $(LIB_DIR) fclean
 re: fclean all
 .PHONY: all clean fclean re
