@@ -6,7 +6,7 @@
 /*   By: jcsantos <jcsantos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/01 12:40:53 by juasanto          #+#    #+#             */
-/*   Updated: 2021/01/11 17:44:06 by jcsantos         ###   ########.fr       */
+/*   Updated: 2021/01/12 13:47:41 by jcsantos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,13 @@ int		fn_check_print(t_parms *prn)
 	return (0);
 }
 
+void	reset_neg(t_parms *prn)
+{
+	prn->flag_width *= -1;
+	prn->current_align = 1;
+	return ;
+}
+
 int		fn_read(t_parms *prn, int tmp_prn_cnt)
 {
 	while ((check_format(prn) == 0))
@@ -42,20 +49,16 @@ int		fn_read(t_parms *prn, int tmp_prn_cnt)
 		tmp_prn_cnt = prn->cnt;
 		check_flags1(prn);
 		check_flags2(prn);
+		if (prn->current_hash == 1)
+			check_flags2(prn);
 		if ((check_num(&prn->flag_width, prn)) < 0)
-		{
-			prn->flag_width *= -1;
-			prn->current_align = 1;
-		}
+			reset_neg(prn);
 		if (prn->string[prn->cnt] == '.')
 		{
 			prn->cnt++;
 			prn->current_pre = 1;
 			if ((check_num(&prn->flag_precision, prn)) < 0)
-			{
-				prn->current_align = 1;
 				prn->current_pre = 0;
-			}
 		}
 		check_parms(prn->lenght_type, &prn->current_lenght, prn);
 		if (tmp_prn_cnt == prn->cnt)

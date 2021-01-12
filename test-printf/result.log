@@ -1441,45 +1441,45 @@
 1440 - ("%-10.3g", -0.000423) : [0m[31mFAILED[0m
 1441 - ("%-10.3g", INT_MIN - 1.0) : [0m[31mFAILED[0m
 1442 - ("%c", 0b01000001) : [0m[0;32mOK [0m
-1443 - ("%hhi", CHAR_MAX) : [0m[31mFAILED[0m
+1443 - ("%hhi", CHAR_MAX) : [0m[0;32mOK [0m
 1444 - ("%hhi", CHAR_MAX + 1) : [0m[31mFAILED[0m
-1445 - ("%hhi", CHAR_MIN) : [0m[31mFAILED[0m
+1445 - ("%hhi", CHAR_MIN) : [0m[0;32mOK [0m
 1446 - ("%hhi", CHAR_MIN - 1) : [0m[31mFAILED[0m
-1447 - ("%hhu", UCHAR_MAX) : [0m[31mFAILED[0m
+1447 - ("%hhu", UCHAR_MAX) : [0m[0;32mOK [0m
 1448 - ("%hhu", UCHAR_MAX + 1) : [0m[31mFAILED[0m
-1449 - ("%hhx", UCHAR_MAX) : [0m[31mFAILED[0m
+1449 - ("%hhx", UCHAR_MAX) : [0m[0;32mOK [0m
 1450 - ("%hhx", UCHAR_MAX + 1) : [0m[31mFAILED[0m
-1451 - ("%hi", SHRT_MAX) : [0m[31mFAILED[0m
+1451 - ("%hi", SHRT_MAX) : [0m[0;32mOK [0m
 1452 - ("%hi", SHRT_MAX + 1) : [0m[31mFAILED[0m
-1453 - ("%hi", SHRT_MIN) : [0m[31mFAILED[0m
+1453 - ("%hi", SHRT_MIN) : [0m[0;32mOK [0m
 1454 - ("%hi", SHRT_MIN - 1) : [0m[31mFAILED[0m
-1455 - ("%hu", USHRT_MAX) : [0m[31mFAILED[0m
+1455 - ("%hu", USHRT_MAX) : [0m[0;32mOK [0m
 1456 - ("%hu", USHRT_MAX + 1) : [0m[31mFAILED[0m
-1457 - ("%hx", USHRT_MAX) : [0m[31mFAILED[0m
+1457 - ("%hx", USHRT_MAX) : [0m[0;32mOK [0m
 1458 - ("%hx", USHRT_MAX + 1) : [0m[31mFAILED[0m
 1459 - ("%li", LONG_MAX) : [0m[31mFAILED[0m
 1460 - ("%li", LONG_MAX + 1) : [0m[31mFAILED[0m
 1461 - ("%li", LONG_MIN) : [0m[31mFAILED[0m
 1462 - ("%li", LONG_MIN - 1) : [0m[31mFAILED[0m
 1463 - ("%lu", ULONG_MAX) : [0m[31mFAILED[0m
-1464 - ("%lu", ULONG_MAX + 1) : [0m[31mFAILED[0m
+1464 - ("%lu", ULONG_MAX + 1) : [0m[0;32mOK [0m
 1465 - ("%lx", ULONG_MAX) : [0m[31mFAILED[0m
-1466 - ("%lx", ULONG_MAX + 1) : [0m[31mFAILED[0m
+1466 - ("%lx", ULONG_MAX + 1) : [0m[0;32mOK [0m
 1467 - ("%lli", LLONG_MAX) : [0m[31mFAILED[0m
 1468 - ("%lli", LLONG_MAX + 1) : [0m[31mFAILED[0m
 1469 - ("%lli", LLONG_MIN) : [0m[31mFAILED[0m
 1470 - ("%lli", LLONG_MIN - 1) : [0m[31mFAILED[0m
 1471 - ("%llu", ULLONG_MAX) : [0m[31mFAILED[0m
-1472 - ("%llu", ULLONG_MAX + 1) : [0m[31mFAILED[0m
+1472 - ("%llu", ULLONG_MAX + 1) : [0m[0;32mOK [0m
 1473 - ("%llx", ULLONG_MAX) : [0m[31mFAILED[0m
-1474 - ("%llx", ULLONG_MAX + 1) : [0m[31mFAILED[0m
+1474 - ("%llx", ULLONG_MAX + 1) : [0m[0;32mOK [0m
 1475 - ("size = %d", t4) : [0m[31mFAILED[0m
 1476 - ("%lc ", 128519) : [0m[31mFAILED[0m
 1477 - ("%lc ", 0x80000) : [0m[31mFAILED[0m
 1478 - ("%lc ", 176) : [0m[31mFAILED[0m
 1479 - ("%lc ", 35211) : [0m[31mFAILED[0m
-1480 - ("%lc ", 0x7E) : [0m[31mFAILED[0m
-1481 - ("%lc ", 0x7F) : [0m[31mFAILED[0m
+1480 - ("%lc ", 0x7E) : [0m[0;32mOK [0m
+1481 - ("%lc ", 0x7F) : [0m[0;32mOK [0m
 1482 - ("%lc ", 0x80) : [0m[31mFAILED[0m
 1483 - ("%lc ", 0x7FF) : [0m[31mFAILED[0m
 1484 - ("%lc ", 0x800) : [0m[31mFAILED[0m
@@ -1493,25 +1493,25 @@
 1492 - ("%-6lc ", 176) : [0m[31mFAILED[0m
 1493 - ("%-6lc ", 35211) : [0m[31mFAILED[0m
 1494 - ("%-6lc ", 128519) : [0m[31mFAILED[0m
-1495 - ("%.0ls ", t) : [0m[31mFAILED[0m
-1496 - ("%.1ls ", t) : [0m[31mFAILED[0m
-1497 - ("%.2ls ", t) : [0m[31mFAILED[0m
+1495 - ("%.0ls ", t) : [0m[0;32mOK [0m
+1496 - ("%.1ls ", t) : [0m[0;32mOK [0m
+1497 - ("%.2ls ", t) : [0m[0;32mOK [0m
 1498 - ("%.3ls ", t) : [0m[31mFAILED[0m
 1499 - ("%.4ls ", t) : [0m[31mFAILED[0m
 1500 - ("%.5ls ", t) : [0m[31mFAILED[0m
 1501 - ("%.6ls ", t) : [0m[31mFAILED[0m
 1502 - ("%.7ls ", t) : [0m[31mFAILED[0m
-1503 - ("%15.0ls ", t) : [0m[31mFAILED[0m
-1504 - ("%15.1ls ", t) : [0m[31mFAILED[0m
-1505 - ("%15.2ls ", t) : [0m[31mFAILED[0m
+1503 - ("%15.0ls ", t) : [0m[0;32mOK [0m
+1504 - ("%15.1ls ", t) : [0m[0;32mOK [0m
+1505 - ("%15.2ls ", t) : [0m[0;32mOK [0m
 1506 - ("%15.3ls ", t) : [0m[31mFAILED[0m
 1507 - ("%15.4ls ", t) : [0m[31mFAILED[0m
 1508 - ("%15.5ls ", t) : [0m[31mFAILED[0m
 1509 - ("%15.6ls ", t) : [0m[31mFAILED[0m
 1510 - ("%15.7ls ", t) : [0m[31mFAILED[0m
-1511 - ("%-15.0ls ", t) : [0m[31mFAILED[0m
-1512 - ("%-15.1ls ", t) : [0m[31mFAILED[0m
-1513 - ("%-15.2ls ", t) : [0m[31mFAILED[0m
+1511 - ("%-15.0ls ", t) : [0m[0;32mOK [0m
+1512 - ("%-15.1ls ", t) : [0m[0;32mOK [0m
+1513 - ("%-15.2ls ", t) : [0m[0;32mOK [0m
 1514 - ("%-15.3ls ", t) : [0m[31mFAILED[0m
 1515 - ("%-15.4ls ", t) : [0m[31mFAILED[0m
 1516 - ("%-15.5ls ", t) : [0m[31mFAILED[0m
@@ -1520,18 +1520,18 @@
 1519 - ("%ls ", t) : [0m[31mFAILED[0m
 1520 - ("%-ls ", t) : [0m[31mFAILED[0m
 1521 - ("%15ls ", t) : [0m[31mFAILED[0m
-1522 - ("%#x", 42) : [0m[31mFAILED[0m
-1523 - ("%#10x", 42) : [0m[31mFAILED[0m
-1524 - ("%#-10x", 42) : [0m[31mFAILED[0m
-1525 - ("%#010x", 42) : [0m[31mFAILED[0m
-1526 - ("%#10.4x", 42) : [0m[31mFAILED[0m
+1522 - ("%#x", 42) : [0m[0;32mOK [0m
+1523 - ("%#10x", 42) : [0m[0;32mOK [0m
+1524 - ("%#-10x", 42) : [0m[0;32mOK [0m
+1525 - ("%#010x", 42) : [0m[0;32mOK [0m
+1526 - ("%#10.4x", 42) : [0m[0;32mOK [0m
 1527 - ("%#10x", 0) : [0m[0;32mOK [0m
 1528 - ("%#10.0x", 0) : [0m[0;32mOK [0m
-1529 - ("%#X", 42) : [0m[31mFAILED[0m
-1530 - ("%#10X", 42) : [0m[31mFAILED[0m
-1531 - ("%#-10X", 42) : [0m[31mFAILED[0m
-1532 - ("%#010X", 42) : [0m[31mFAILED[0m
-1533 - ("%#10.4X", 42) : [0m[31mFAILED[0m
+1529 - ("%#X", 42) : [0m[0;32mOK [0m
+1530 - ("%#10X", 42) : [0m[0;32mOK [0m
+1531 - ("%#-10X", 42) : [0m[0;32mOK [0m
+1532 - ("%#010X", 42) : [0m[0;32mOK [0m
+1533 - ("%#10.4X", 42) : [0m[0;32mOK [0m
 1534 - ("%#10X", 0) : [0m[0;32mOK [0m
 1535 - ("%#10.0X", 0) : [0m[0;32mOK [0m
 1536 - ("%#f", 42.0) : [0m[31mFAILED[0m
