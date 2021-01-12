@@ -6,7 +6,7 @@
 #    By: jcsantos <jcsantos@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/01/16 12:28:00 by fballest          #+#    #+#              #
-#    Updated: 2021/01/11 17:28:31 by jcsantos         ###   ########.fr        #
+#    Updated: 2021/01/12 17:06:36 by jcsantos         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,7 +23,8 @@ SRC_FILES = ft_printf.c \
 			fn_printi_d.c \
 			fn_print_c.c \
 			fn_print_s.c \
-			fn_printf_chk_str.c
+			fn_printf_chk_str.c \
+			fn_printf_fill.c
 SRC = $(SRC_FILES:%=$(SRC_DIR)%)
 OBJ_FILES = $(SRC_FILES:.c=.o)
 OBJ = $(addprefix $(OBJ_DIR), $(OBJ_FILES))

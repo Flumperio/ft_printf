@@ -6,7 +6,7 @@
 /*   By: jcsantos <jcsantos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/24 10:06:46 by juasanto          #+#    #+#             */
-/*   Updated: 2021/01/12 13:46:26 by jcsantos         ###   ########.fr       */
+/*   Updated: 2021/01/12 16:11:22 by jcsantos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -515,25 +515,11 @@ int        main(void)
 	printf_chars = printf("%#3.4x\n", 42);
 	cnt_imp = ft_printf("%#3.4x\n", 42)	;
 	check_ft(printf_chars, cnt_imp);
+	printf_chars = printf("%0+4i\n", 42);
+	cnt_imp = ft_printf("%0+4i\n", 42)	;
+	check_ft(printf_chars, cnt_imp);
 	printf("******************************************************************\n");
 	system("leaks -q --fullContent ft_printf.out");
 	return (0);
 }
-
-
-
-// 1526 - ("%#10.4x", 42) : FAILED
-// 1529 - ("%#X", 42) : FAILED
-// 1530 - ("%#10X", 42) : FAILED
-// 1531 - ("%#-10X", 42) : FAILED
-// 1532 - ("%#010X", 42) : FAILED
-// 1533 - ("%#10.4X", 42)
-
-
-// 1526 - ("%#10.4x", 42) : FAILED
-// 1529 - ("%#X", 42) : FAILED
-// 1532 - ("%#010X", 42) : FAILED
-// 1533 - ("%#10.4X", 42) : FAILED
-// 1526 - ("%#10.4x", 42) : FAILED
-// 1532 - ("%#010X", 42) : FAILED
-// 1533 - ("%#10.4X", 42) : FAILED
+//("%0 10i", 42)

@@ -6,7 +6,7 @@
 /*   By: jcsantos <jcsantos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/08 13:16:32 by jcsantos          #+#    #+#             */
-/*   Updated: 2021/01/08 13:22:52 by jcsantos         ###   ########.fr       */
+/*   Updated: 2021/01/12 16:43:15 by jcsantos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,17 +21,17 @@ int		check_flags1(t_parms *prn)
 	{
 		if (prn->string[prn->cnt] == '-')
 		{
-			prn->current_align = 1;
+			prn->c_align = 1;
 			prn->cnt++;
 		}
 		if (prn->string[prn->cnt] == '+')
 		{
-			prn->current_sign = 1;
+			prn->c_sign = 1;
 			prn->cnt++;
 		}
 		if (prn->string[prn->cnt] == ' ')
 		{
-			prn->current_space = 1;
+			prn->c_space = 1;
 			prn->cnt++;
 		}
 		return (1);
@@ -48,12 +48,12 @@ int		check_flags2(t_parms *prn)
 	{
 		if (prn->string[prn->cnt] == '0')
 		{
-			prn->current_zero = 1;
+			prn->c_zero = 1;
 			prn->cnt++;
 		}
 		if (prn->string[prn->cnt] == '#')
 		{
-			prn->current_hash = 1;
+			prn->c_hash = 1;
 			prn->cnt++;
 		}
 		return (1);
@@ -110,7 +110,7 @@ int		check_format(t_parms *prn)
 	{
 		if (prn->string[prn->cnt] == prn->format_type[cnt1])
 		{
-			prn->current_format = prn->string[prn->cnt];
+			prn->cf = prn->string[prn->cnt];
 			prn->cnt++;
 			return (1);
 		}

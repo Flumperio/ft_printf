@@ -6,7 +6,7 @@
 /*   By: jcsantos <jcsantos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/05 11:18:05 by juasanto          #+#    #+#             */
-/*   Updated: 2021/01/11 17:33:15 by jcsantos         ###   ########.fr       */
+/*   Updated: 2021/01/12 17:11:30 by jcsantos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,30 +34,29 @@ typedef struct	s_parms
 {
 	va_list		args;
 	char		*args_temp;
-	int			args_char_temp;
+	int			a_c_t;
 	int			args_len;
 	int			cnt;
 	int			prt_chars;
-	char		current_format;
-	char		current_flag;
-	char		current_lenght;
-	int			current_size;
-	int			current_pre;
+	char		cf;
+	char		c_flag;
+	char		c_lenght;
+	int			cs;
+	int			c_pre;
 	const char	*string;
-	char		*print_string;
+	char		*ps;
 	char		*format_type;
 	char		*flags_type;
-	int			current_align;
-	int			current_sign;
-	int			current_space;
-	int			current_zero;
-	int			current_hash;
+	int			c_align;
+	int			c_sign;
+	int			c_space;
+	int			c_zero;
+	int			c_hash;
 	char		*lenght_type;
-	int			flag_width;
-	int			flag_precision;
-	int			flag_size;
+	int			flag_w;
+	int			flag_p;
 	char		fill_char;
-	int			flag_sign;
+	int			flag_s;
 }				t_parms;
 
 int				ft_printf(const char *string, ...);
@@ -84,5 +83,8 @@ int				check_format(t_parms *prn);
 int				fn_write(const char *str, int len, t_parms *prn);
 char			*ft_itoa_u(unsigned int n);
 char			*fn_dectohex(long long int n, int capital, int j);
+void			fill_str(int cnt, int ab, char *fill, t_parms *prn);
+void			fill_sign(t_parms *prn);
+void			fill_0x(t_parms *prn);
 
 #endif

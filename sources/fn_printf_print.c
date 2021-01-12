@@ -6,7 +6,7 @@
 /*   By: jcsantos <jcsantos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/13 10:09:47 by juasanto          #+#    #+#             */
-/*   Updated: 2021/01/11 16:40:33 by jcsantos         ###   ########.fr       */
+/*   Updated: 2021/01/12 16:45:05 by jcsantos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	fn_print_chk_s(t_parms *prn)
 {
-	if (prn->flag_precision == 0 && prn->current_pre > 0 &&
-		prn->flag_width <= 0)
+	if (prn->flag_p == 0 && prn->c_pre > 0 &&
+		prn->flag_w <= 0)
 	{
 		prn->args_temp = "";
 		return ;
@@ -30,8 +30,8 @@ void	fn_print_chk_s(t_parms *prn)
 
 void	fn_print_chk_c(t_parms *prn)
 {
-	if (prn->current_format == 'c')
-		prn->args_char_temp = va_arg(prn->args, int);
+	if (prn->cf == 'c')
+		prn->a_c_t = va_arg(prn->args, int);
 	prn->args_len = 1;
 	fn_print_c(prn);
 }
@@ -39,13 +39,13 @@ void	fn_print_chk_c(t_parms *prn)
 char	*fn_print_chk_iud(t_parms *prn, char *temp, int int_temp,
 							long long int uint_temp)
 {
-	if (prn->current_format == 'u' || prn->current_format == 'U')
+	if (prn->cf == 'u' || prn->cf == 'U')
 	{
 		uint_temp = va_arg(prn->args, unsigned int);
 		if (uint_temp < 0)
 		{
 			uint_temp *= -1;
-			prn->flag_sign = 1;
+			prn->flag_s = 1;
 		}
 		temp = ft_itoa_u(uint_temp);
 	}
@@ -55,7 +55,7 @@ char	*fn_print_chk_iud(t_parms *prn, char *temp, int int_temp,
 		if (int_temp < 0)
 		{
 			int_temp *= -1;
-			prn->flag_sign = 1;
+			prn->flag_s = 1;
 		}
 		temp = ft_itoa_u(int_temp);
 	}
@@ -67,13 +67,13 @@ char	*fn_print_chk_iud(t_parms *prn, char *temp, int int_temp,
 
 char	*fn_print_chk_xp(t_parms *prn, char *temp, long long int uint_temp)
 {
-	if (prn->current_format == 'p')
+	if (prn->cf == 'p')
 		uint_temp = va_arg(prn->args, unsigned long int);
 	else
 	{
 		uint_temp = va_arg(prn->args, unsigned int);
 	}
-	if (prn->current_format == 'x' || prn->current_format == 'p')
+	if (prn->cf == 'x' || prn->cf == 'p')
 		temp = fn_dectohex(uint_temp, 0, 0);
 	else
 		temp = fn_dectohex(uint_temp, 1, 0);

@@ -1,15 +1,15 @@
 /* ************************************************************************** */
-/*                                                          LE - /            */
-/*                                                              /             */
-/*   test-printf.c                                    .::    .:/ .      .::   */
-/*                                                 +:+:+   +:    +:  +:+:+    */
-/*   By: aalleman <marvin@le-101.fr>                +:+   +:    +:    +:+     */
-/*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2019/10/23 16:54:40 by aalleman     #+#   ##    ##    #+#       */
-/*   Updated: 2019/12/07 17:19:51 by aalleman    ###    #+. /#+    ###.fr     */
-/*                                                         /                  */
-/*                                                        /                   */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   test-printf.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jcsantos <jcsantos@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/10/23 16:54:40 by aalleman          #+#    #+#             */
+/*   Updated: 2021/01/12 16:24:07 by jcsantos         ###   ########.fr       */
+/*                                                                            */
 /* ************************************************************************** */
+
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -1940,7 +1940,7 @@ int		main(int ac, char **av)
 		return(ac == 2 ? printf("%011.2X", UINT_MAX) : ft_printf("%011.2X", UINT_MAX));
 	if (nb == count++)
 		return(ac == 2 ? printf("%011.10X", UINT_MAX) : ft_printf("%011.10X", UINT_MAX));
-	
+
 	// [I - Tests with *].
 	if (nb == count++)
 		return(ac == 2 ? printf("%*d", 0, 42) : ft_printf("%*d", 0, 42));
@@ -2030,7 +2030,7 @@ int		main(int ac, char **av)
 		return(ac == 2 ? printf("%*.*s", -5, 0, "Hello") : ft_printf("%*.*s", -5, 0, "Hello"));
 	if (nb == count++)
 		return(ac == 2 ? printf("%*.*s", 5, 5, "Hello") : ft_printf("%*.*s", 5, 5, "Hello"));
-	
+
 	// [J - Tests with n].
 	int		t1 = -1;
 	int		t2 = -1;
