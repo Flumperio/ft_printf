@@ -6,7 +6,7 @@
 /*   By: jcsantos <jcsantos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/24 10:06:46 by juasanto          #+#    #+#             */
-/*   Updated: 2021/01/12 16:11:22 by jcsantos         ###   ########.fr       */
+/*   Updated: 2021/01/14 16:58:00 by jcsantos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,6 +59,7 @@ int        main(void)
 	test_error = 0;
 	t2 = 3;
 	s = "abc";
+	int		tab[7] = {-135, -12, -1, 0, 1, 13, 198};
 
 	printf("\n\n********************* CHECK STRING *******************************\n\n");
 	printf_chars = printf("%s %s %s %s %s %s %s %s %s %s %s %s\n", "aaa", "bbb", "ccc", "ddd", "eee", "fff", "ggg", "hhh", "iii", "jjj", "kkk", "lll");
@@ -109,7 +110,7 @@ int        main(void)
 	printf_chars = printf("%c\n");
 	cnt_imp = ft_printf("%c\n");
 	check_ft(printf_chars, cnt_imp);
-	printf("\n\n********************* TEST 2 x porcentaje *****************\n\n");
+	printf("\n\n********************* TEST 2 X porcentaje *****************\n\n");
 	printf_chars = printf("%-05%\n");
 	cnt_imp = ft_printf("%-05%\n");
 	check_ft(printf_chars, cnt_imp);
@@ -127,29 +128,29 @@ int        main(void)
 	{
 		while (cnt1 < 5)
 		{
-			printf_chars = printf("%*.*i\n", cnt1, cnt, 1111);
-			cnt_imp = ft_printf("%*.*i\n", cnt1, cnt, 2222);
+			printf_chars = printf("%*.*i\n", cnt1*cnt, cnt, 1111);
+			cnt_imp = ft_printf("%*.*i\n", cnt1*cnt, cnt, 2222);
 			if (printf_chars == cnt_imp)
 				test_num++;
 			else
 				test_error++;
 
-			printf_chars = printf("%-*.*i\n", cnt1, cnt, 3333);
-			cnt_imp = ft_printf("%-*.*i\n", cnt1, cnt, 4444);
+			printf_chars = printf("%-*.*i\n", cnt1*cnt, cnt, 3333);
+			cnt_imp = ft_printf("%-*.*i\n", cnt1*cnt, cnt, 4444);
 			if (printf_chars == cnt_imp)
 				test_num++;
 			else
 				test_error++;
 
-			printf_chars = printf("%*.*i\n", cnt1, cnt, -5555);
-			cnt_imp = ft_printf("%*.*i\n", cnt1, cnt, -6666);
+			printf_chars = printf("%*.*i\n", cnt1*cnt, cnt, -5555);
+			cnt_imp = ft_printf("%*.*i\n", cnt1*cnt, cnt, -6666);
 			if (printf_chars == cnt_imp)
 				test_num++;
 			else
 				test_error++;
 
-			printf_chars = printf("%-*.*i\n", cnt1, cnt, -7777);
-			cnt_imp = ft_printf("%-*.*i\n", cnt1, cnt, -8888);
+			printf_chars = printf("%-*.*i\n", cnt1*cnt, cnt, -7777);
+			cnt_imp = ft_printf("%-*.*i\n", cnt1*cnt, cnt, -8888);
 			if (printf_chars == cnt_imp)
 				test_num++;
 			else
@@ -215,8 +216,8 @@ int        main(void)
 	cnt_imp = ft_printf("%.0i\n", 0);
 	check_ft(printf_chars, cnt_imp);
 	printf("\n\n********************* CHAR ***************************************\n\n");
-	printf_chars = printf("%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c\n",' ','!','"','#','$','%','&','\'','(',')','*','+',',','-','.','/','0','1','2','3','4','5','6','7','8','9',':',';','<','=','>','?','@','A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z','[','\\',']','^','_','`','a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','{','|','}','~','');
-	cnt_imp = ft_printf("%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c\n",' ','!','"','#','$','%','&','\'','(',')','*','+',',','-','.','/','0','1','2','3','4','5','6','7','8','9',':',';','<','=','>','?','@','A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z','[','\\',']','^','_','`','a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','{','|','}','~','');
+	printf_chars = printf("%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c\n",' ','!','"','#','$','%','&','\'','(',')','*','+',',','-','.','/','0','1','2','3','4','5','6','7','8','9',':',';','<','=','>','?','@','A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z','[','\\',']','^','_','`','a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','X','y','z','{','|','}','~','');
+	cnt_imp = ft_printf("%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c\n",' ','!','"','#','$','%','&','\'','(',')','*','+',',','-','.','/','0','1','2','3','4','5','6','7','8','9',':',';','<','=','>','?','@','A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z','[','\\',']','^','_','`','a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','X','y','z','{','|','}','~','');
 	check_ft(printf_chars, cnt_imp);
 	printf_chars = printf("%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c\n",(char)1,(char)2,(char)3,(char)4,(char)5,(char)6,(char)7,(char)8,(char)9,(char)10,(char)11,(char)12,(char)13,(char)14,(char)15,(char)16,(char)17,(char)18,(char)19,(char)20,(char)21,(char)22,(char)23,(char)24,(char)25,(char)26,(char)27,(char)28,(char)29,(char)30,(char)31);
 	cnt_imp = ft_printf("%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c\n",(char)1,(char)2,(char)3,(char)4,(char)5,(char)6,(char)7,(char)8,(char)9,(char)10,(char)11,(char)12,(char)13,(char)14,(char)15,(char)16,(char)17,(char)18,(char)19,(char)20,(char)21,(char)22,(char)23,(char)24,(char)25,(char)26,(char)27,(char)28,(char)29,(char)30,(char)31);
@@ -227,8 +228,8 @@ int        main(void)
 	printf_chars = printf("%4c\n", 'a');
 	cnt_imp = ft_printf("%4c\n", 'a');
 	check_ft(printf_chars, cnt_imp);
-	printf_chars = printf("%1c%2c%3c%4c%1c%2c%3c%4c%1c%2c%3c%4c%1c%2c%3c%4c%1c%2c%3c%4c%1c%2c%3c%4c%1c%2c%3c%4c%1c%2c%3c%4c%1c%2c%3c%4c%1c%2c%3c%4c%1c%2c%3c%4c%1c%2c%3c%4c%1c%2c%3c%4c%1c%2c%3c%4c%1c%2c%3c%4c%1c%2c%3c%4c%1c%2c%3c%4c%1c%2c%3c%4c%1c%2c%3c%4c%1c%2c%3c%4c%1c%2c%3c%4c%1c%2c%3c%4c%1c%2c%3c%4c%1c%2c%3c%4c\n",' ','!','"','#','$','%','&','\'','(',')','*','+',',','-','.','/','0','1','2','3','4','5','6','7','8','9',':',';','<','=','>','?','@','A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z','[','\\',']','^','_','`','a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','{','|','}','~','');
-	cnt_imp = ft_printf("%1c%2c%3c%4c%1c%2c%3c%4c%1c%2c%3c%4c%1c%2c%3c%4c%1c%2c%3c%4c%1c%2c%3c%4c%1c%2c%3c%4c%1c%2c%3c%4c%1c%2c%3c%4c%1c%2c%3c%4c%1c%2c%3c%4c%1c%2c%3c%4c%1c%2c%3c%4c%1c%2c%3c%4c%1c%2c%3c%4c%1c%2c%3c%4c%1c%2c%3c%4c%1c%2c%3c%4c%1c%2c%3c%4c%1c%2c%3c%4c%1c%2c%3c%4c%1c%2c%3c%4c%1c%2c%3c%4c%1c%2c%3c%4c\n",' ','!','"','#','$','%','&','\'','(',')','*','+',',','-','.','/','0','1','2','3','4','5','6','7','8','9',':',';','<','=','>','?','@','A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z','[','\\',']','^','_','`','a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','{','|','}','~','');
+	printf_chars = printf("%1c%2c%3c%4c%1c%2c%3c%4c%1c%2c%3c%4c%1c%2c%3c%4c%1c%2c%3c%4c%1c%2c%3c%4c%1c%2c%3c%4c%1c%2c%3c%4c%1c%2c%3c%4c%1c%2c%3c%4c%1c%2c%3c%4c%1c%2c%3c%4c%1c%2c%3c%4c%1c%2c%3c%4c%1c%2c%3c%4c%1c%2c%3c%4c%1c%2c%3c%4c%1c%2c%3c%4c%1c%2c%3c%4c%1c%2c%3c%4c%1c%2c%3c%4c%1c%2c%3c%4c%1c%2c%3c%4c%1c%2c%3c%4c\n",' ','!','"','#','$','%','&','\'','(',')','*','+',',','-','.','/','0','1','2','3','4','5','6','7','8','9',':',';','<','=','>','?','@','A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z','[','\\',']','^','_','`','a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','X','y','z','{','|','}','~','');
+	cnt_imp = ft_printf("%1c%2c%3c%4c%1c%2c%3c%4c%1c%2c%3c%4c%1c%2c%3c%4c%1c%2c%3c%4c%1c%2c%3c%4c%1c%2c%3c%4c%1c%2c%3c%4c%1c%2c%3c%4c%1c%2c%3c%4c%1c%2c%3c%4c%1c%2c%3c%4c%1c%2c%3c%4c%1c%2c%3c%4c%1c%2c%3c%4c%1c%2c%3c%4c%1c%2c%3c%4c%1c%2c%3c%4c%1c%2c%3c%4c%1c%2c%3c%4c%1c%2c%3c%4c%1c%2c%3c%4c%1c%2c%3c%4c%1c%2c%3c%4c\n",' ','!','"','#','$','%','&','\'','(',')','*','+',',','-','.','/','0','1','2','3','4','5','6','7','8','9',':',';','<','=','>','?','@','A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z','[','\\',']','^','_','`','a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','X','y','z','{','|','}','~','');
 	check_ft(printf_chars, cnt_imp);
 	printf_chars = printf("%u\n", 4294967295u);
 	cnt_imp = ft_printf("%u\n", 4294967295u);
@@ -318,9 +319,9 @@ int        main(void)
 	printf_chars = printf("%%d 0000042 == |%d|\n", 0000042);
 	cnt_imp = ft_printf("%%d 0000042 == |%d|\n", 0000042);
 	check_ft(printf_chars, cnt_imp);
-	printf("************************** TEST x X ****************************\n");
-	printf_chars = printf("this %x number\n", 45653);
-	cnt_imp = ft_printf("this %x number\n", 45653);
+	printf("************************** TEST X X ****************************\n");
+	printf_chars = printf("this %X number\n", 45653);
+	cnt_imp = ft_printf("this %X number\n", 45653);
 	check_ft(printf_chars, cnt_imp);
 	printf_chars = printf("this %X number\n", 456453);
 	cnt_imp = ft_printf("this %X number\n", 456453);
@@ -328,6 +329,328 @@ int        main(void)
 	printf_chars = printf("this %X number\n", 0);
 	cnt_imp = ft_printf("this %X number\n", 0);
 	check_ft(printf_chars, cnt_imp);
+	cnt = 0;
+	while ( cnt < 7)
+	{
+		printf_chars = printf("-->|%4.3X|<--\n", tab[cnt]);
+		cnt_imp = ft_printf("-->|%4.3X|<--\n", tab[cnt]);
+		check_ft(printf_chars, cnt_imp);
+		cnt ++;
+	}
+	cnt = 0;
+	while ( cnt < 7)
+	{
+		printf_chars = printf("-->|%4.4X|<--\n", tab[cnt]);
+		cnt_imp = ft_printf("-->|%4.4X|<--\n", tab[cnt]);
+		check_ft(printf_chars, cnt_imp);
+		cnt ++;
+	}
+	cnt = 0;
+	while ( cnt < 7)
+	{
+		printf_chars = printf("-->|%4X|<--\n", tab[cnt]);
+		cnt_imp = ft_printf("-->|%4X|<--\n", tab[cnt]);
+		check_ft(printf_chars, cnt_imp);
+		cnt ++;
+	}
+	cnt = 0;
+	while ( cnt < 7)
+	{
+		printf_chars = printf("-->|%#-4.X|<--\n", tab[cnt]);
+		cnt_imp = ft_printf("-->|%#-4.X|<--\n", tab[cnt]);
+		check_ft(printf_chars, cnt_imp);
+		cnt ++;
+	}
+	cnt = 0;
+	while ( cnt < 7)
+	{
+		printf_chars = printf("-->|%#-4.*X|<--\n", -4, tab[cnt]);
+		cnt_imp = ft_printf("-->|%#-4.*X|<--\n", -4, tab[cnt]);
+		check_ft(printf_chars, cnt_imp);
+		cnt ++;
+	}
+		cnt = 0;
+	while ( cnt < 7)
+	{
+		printf_chars = printf("-->|%#-4.*X|<--\n", -3, tab[cnt]);
+		cnt_imp = ft_printf("-->|%#-4.*X|<--\n", -3, tab[cnt]);
+		check_ft(printf_chars, cnt_imp);
+		cnt ++;
+	}
+	printf("*******************************1***********************************\n");
+		cnt = 0;
+	while ( cnt < 7)
+	{
+		printf_chars = printf("-->|%#-4.*X|<--\n", -2, tab[cnt]);
+		cnt_imp = ft_printf("-->|%#-4.*X|<--\n", -2, tab[cnt]);
+		check_ft(printf_chars, cnt_imp);
+		cnt ++;
+	}
+	printf("*******************************2***********************************\n");
+		cnt = 0;
+	while ( cnt < 7)
+	{
+		printf_chars = printf("-->|%#-4.*X|<--\n", -1, tab[cnt]);
+		cnt_imp = ft_printf("-->|%#-4.*X|<--\n", -1, tab[cnt]);
+		check_ft(printf_chars, cnt_imp);
+		cnt ++;
+	}
+	printf("********************************3**********************************\n");
+			cnt = 0;
+	while ( cnt < 7)
+	{
+		printf_chars = printf("-->|%#-4.*X|<--\n", 0, tab[cnt]);
+		cnt_imp = ft_printf("-->|%#-4.*X|<--\n", 0, tab[cnt]);
+		check_ft(printf_chars, cnt_imp);
+		cnt ++;
+	}
+	printf("********************************4**********************************\n");
+			cnt = 0;
+	while ( cnt < 7)
+	{
+		printf("--> tab%i\n", tab[cnt]);
+		printf_chars = printf("-->|%#-4.*X|<--\n", 1, tab[cnt]);
+		cnt_imp = ft_printf("-->|%#-4.*X|<--\n", 1, tab[cnt]);
+		check_ft(printf_chars, cnt_imp);
+		cnt ++;
+	}
+	printf("*********************************5*********************************\n");
+	cnt = 0;
+	while ( cnt < 7)
+	{
+		printf("--> tab = %i\n", tab[cnt]);
+		printf_chars = printf("-->|%#-4.*X|<--\n", 2, tab[cnt]);
+		cnt_imp = ft_printf("-->|%#-4.*X|<--\n", 2, tab[cnt]);
+		check_ft(printf_chars, cnt_imp);
+		cnt ++;
+	}
+	printf("*********************************6*********************************\n");
+	cnt = 0;
+	while ( cnt < 7)
+	{
+		printf("--> tab = %i\n", tab[cnt]);
+		printf_chars = printf("-->|%#-2X|<--\n", tab[cnt]);
+		cnt_imp = ft_printf("-->|%#-2X|<--\n", tab[cnt]);
+		check_ft(printf_chars, cnt_imp);
+		cnt ++;
+	}
+
+	printf("**********************************7********************************\n");
+	cnt = 0;
+	while ( cnt < 7)
+	{
+		printf("--> tab = %i\n", tab[cnt]);
+		printf_chars = printf("-->|%#0.*X|<--\n", 2, tab[cnt]);
+		cnt_imp = ft_printf("-->|%#0.*X|<--\n", 2, tab[cnt]);
+		check_ft(printf_chars, cnt_imp);
+		cnt ++;
+	}
+	printf("********************************8**********************************\n");
+	cnt = 0;
+	while ( cnt < 7)
+	{
+		printf("--> tab = %i\n", tab[cnt]);
+		printf_chars = printf("-->|%#0*.X|<--\n", -4, tab[cnt]);
+		cnt_imp = ft_printf("-->|%#0*.X|<--\n", -4, tab[cnt]);
+		check_ft(printf_chars, cnt_imp);
+		cnt ++;
+	}
+	printf("*******************************9***********************************\n");
+	cnt = 0;
+	while ( cnt < 7)
+	{
+		printf("--> tab = %i\n", tab[cnt]);
+		printf_chars = printf("-->|%#0*.*X|<--\n", 2, -4, tab[cnt]);
+		cnt_imp = ft_printf("-->|%#0*.*X|<--\n", 2, -4, tab[cnt]);
+		check_ft(printf_chars, cnt_imp);
+		cnt ++;
+	}
+	printf("******************************10************************************\n");
+	cnt = 0;
+	while ( cnt < 7)
+	{
+		printf("--> tab = %i\n", tab[cnt]);
+		printf_chars = printf("-->|%#04X|<--\n", tab[cnt]);
+		cnt_imp = ft_printf("-->|%#04X|<--\n", tab[cnt]);
+		check_ft(printf_chars, cnt_imp);
+		cnt ++;
+	}
+	printf("*******************************11***********************************\n");
+	cnt = 0;
+	while ( cnt < 7)
+	{
+		printf("--> tab = %i\n", tab[cnt]);
+		printf_chars = printf("-->|%#0*X|<--\n", 2, tab[cnt]);
+		cnt_imp = ft_printf("-->|%#0*X|<--\n", 2, tab[cnt]);
+		check_ft(printf_chars, cnt_imp);
+		cnt ++;
+	}
+	printf_chars = printf("this %x number\n", 45653);
+	cnt_imp = ft_printf("this %x number\n", 45653);
+	check_ft(printf_chars, cnt_imp);
+	printf_chars = printf("this %x number\n", 456453);
+	cnt_imp = ft_printf("this %x number\n", 456453);
+	check_ft(printf_chars, cnt_imp);
+	printf_chars = printf("this %x number\n", 0);
+	cnt_imp = ft_printf("this %x number\n", 0);
+	check_ft(printf_chars, cnt_imp);
+	cnt = 0;
+	while ( cnt < 7)
+	{
+		printf_chars = printf("-->|%4.3x|<--\n", tab[cnt]);
+		cnt_imp = ft_printf("-->|%4.3x|<--\n", tab[cnt]);
+		check_ft(printf_chars, cnt_imp);
+		cnt ++;
+	}
+	cnt = 0;
+	while ( cnt < 7)
+	{
+		printf_chars = printf("-->|%4.4x|<--\n", tab[cnt]);
+		cnt_imp = ft_printf("-->|%4.4x|<--\n", tab[cnt]);
+		check_ft(printf_chars, cnt_imp);
+		cnt ++;
+	}
+	cnt = 0;
+	while ( cnt < 7)
+	{
+		printf_chars = printf("-->|%4x|<--\n", tab[cnt]);
+		cnt_imp = ft_printf("-->|%4x|<--\n", tab[cnt]);
+		check_ft(printf_chars, cnt_imp);
+		cnt ++;
+	}
+	cnt = 0;
+	while ( cnt < 7)
+	{
+		printf_chars = printf("-->|%#-4.x|<--\n", tab[cnt]);
+		cnt_imp = ft_printf("-->|%#-4.x|<--\n", tab[cnt]);
+		check_ft(printf_chars, cnt_imp);
+		cnt ++;
+	}
+	cnt = 0;
+	while ( cnt < 7)
+	{
+		printf_chars = printf("-->|%#-4.*x|<--\n", -4, tab[cnt]);
+		cnt_imp = ft_printf("-->|%#-4.*x|<--\n", -4, tab[cnt]);
+		check_ft(printf_chars, cnt_imp);
+		cnt ++;
+	}
+		cnt = 0;
+	while ( cnt < 7)
+	{
+		printf_chars = printf("-->|%#-4.*x|<--\n", -3, tab[cnt]);
+		cnt_imp = ft_printf("-->|%#-4.*x|<--\n", -3, tab[cnt]);
+		check_ft(printf_chars, cnt_imp);
+		cnt ++;
+	}
+	printf("*******************************1***********************************\n");
+		cnt = 0;
+	while ( cnt < 7)
+	{
+		printf_chars = printf("-->|%#-4.*x|<--\n", -2, tab[cnt]);
+		cnt_imp = ft_printf("-->|%#-4.*x|<--\n", -2, tab[cnt]);
+		check_ft(printf_chars, cnt_imp);
+		cnt ++;
+	}
+	printf("*******************************2***********************************\n");
+		cnt = 0;
+	while ( cnt < 7)
+	{
+		printf_chars = printf("-->|%#-4.*x|<--\n", -1, tab[cnt]);
+		cnt_imp = ft_printf("-->|%#-4.*x|<--\n", -1, tab[cnt]);
+		check_ft(printf_chars, cnt_imp);
+		cnt ++;
+	}
+	printf("********************************3**********************************\n");
+			cnt = 0;
+	while ( cnt < 7)
+	{
+		printf_chars = printf("-->|%#-4.*x|<--\n", 0, tab[cnt]);
+		cnt_imp = ft_printf("-->|%#-4.*x|<--\n", 0, tab[cnt]);
+		check_ft(printf_chars, cnt_imp);
+		cnt ++;
+	}
+	printf("********************************4**********************************\n");
+			cnt = 0;
+	while ( cnt < 7)
+	{
+		printf("--> tab%i\n", tab[cnt]);
+		printf_chars = printf("-->|%#-4.*x|<--\n", 1, tab[cnt]);
+		cnt_imp = ft_printf("-->|%#-4.*x|<--\n", 1, tab[cnt]);
+		check_ft(printf_chars, cnt_imp);
+		cnt ++;
+	}
+	printf("*********************************5*********************************\n");
+	cnt = 0;
+	while ( cnt < 7)
+	{
+		printf("--> tab = %i\n", tab[cnt]);
+		printf_chars = printf("-->|%#-4.*x|<--\n", 2, tab[cnt]);
+		cnt_imp = ft_printf("-->|%#-4.*x|<--\n", 2, tab[cnt]);
+		check_ft(printf_chars, cnt_imp);
+		cnt ++;
+	}
+	printf("*********************************6*********************************\n");
+	cnt = 0;
+	while ( cnt < 7)
+	{
+		printf("--> tab = %i\n", tab[cnt]);
+		printf_chars = printf("-->|%#-2x|<--\n", tab[cnt]);
+		cnt_imp = ft_printf("-->|%#-2x|<--\n", tab[cnt]);
+		check_ft(printf_chars, cnt_imp);
+		cnt ++;
+	}
+
+	printf("**********************************7********************************\n");
+	cnt = 0;
+	while ( cnt < 7)
+	{
+		printf("--> tab = %i\n", tab[cnt]);
+		printf_chars = printf("-->|%#0.*x|<--\n", 2, tab[cnt]);
+		cnt_imp = ft_printf("-->|%#0.*x|<--\n", 2, tab[cnt]);
+		check_ft(printf_chars, cnt_imp);
+		cnt ++;
+	}
+	printf("********************************8**********************************\n");
+	cnt = 0;
+	while ( cnt < 7)
+	{
+		printf("--> tab = %i\n", tab[cnt]);
+		printf_chars = printf("-->|%#0*.x|<--\n", -4, tab[cnt]);
+		cnt_imp = ft_printf("-->|%#0*.x|<--\n", -4, tab[cnt]);
+		check_ft(printf_chars, cnt_imp);
+		cnt ++;
+	}
+	printf("*******************************9***********************************\n");
+	cnt = 0;
+	while ( cnt < 7)
+	{
+		printf("--> tab = %i\n", tab[cnt]);
+		printf_chars = printf("-->|%#0*.*x|<--\n", 2, -4, tab[cnt]);
+		cnt_imp = ft_printf("-->|%#0*.*x|<--\n", 2, -4, tab[cnt]);
+		check_ft(printf_chars, cnt_imp);
+		cnt ++;
+	}
+	printf("******************************10************************************\n");
+	cnt = 0;
+	while ( cnt < 7)
+	{
+		printf("--> tab = %i\n", tab[cnt]);
+		printf_chars = printf("-->|%#04x|<--\n", tab[cnt]);
+		cnt_imp = ft_printf("-->|%#04x|<--\n", tab[cnt]);
+		check_ft(printf_chars, cnt_imp);
+		cnt ++;
+	}
+	printf("*******************************11***********************************\n");
+	cnt = 0;
+	while ( cnt < 7)
+	{
+		printf("--> tab = %i\n", tab[cnt]);
+		printf_chars = printf("-->|%#0*x|<--\n", 2, tab[cnt]);
+		cnt_imp = ft_printf("-->|%#0*x|<--\n", 2, tab[cnt]);
+		check_ft(printf_chars, cnt_imp);
+		cnt ++;
+	}
+
 	printf("************************** TEST p *****************************\n");
 	printf_chars = printf("%p\n", "Hola");
 	cnt_imp = ft_printf("%p\n", "Hola");
@@ -479,26 +802,26 @@ int        main(void)
 	cnt_imp = ft_printf("%+15d\n", 0) ;
 	check_ft(printf_chars, cnt_imp);
 	printf("************************** TEST + # *****************************\n");
-	printf_chars = printf("%#x\n", 42);
-	cnt_imp = ft_printf("%#x\n", 42);
+	printf_chars = printf("%#X\n", 42);
+	cnt_imp = ft_printf("%#X\n", 42);
 	check_ft(printf_chars, cnt_imp);
-	printf_chars = printf("%#10x\n", 42);
-	cnt_imp = ft_printf("%#10x\n", 42);
+	printf_chars = printf("%#10X\n", 42);
+	cnt_imp = ft_printf("%#10X\n", 42);
 	check_ft(printf_chars, cnt_imp);
-	printf_chars = printf("%#-10x\n", 42);
-	cnt_imp = ft_printf("%#-10x\n", 42);
+	printf_chars = printf("%#-10X\n", 42);
+	cnt_imp = ft_printf("%#-10X\n", 42);
 	check_ft(printf_chars, cnt_imp);
-	printf_chars = printf("%0#10x\n", 42);
-	cnt_imp = ft_printf("%0#10x\n", 42);
+	printf_chars = printf("%0#10X\n", 42);
+	cnt_imp = ft_printf("%0#10X\n", 42);
 	check_ft(printf_chars, cnt_imp);
-	printf_chars = printf("%#010x\n", 42);
-	cnt_imp = ft_printf("%#010x\n", 42);
+	printf_chars = printf("%#010X\n", 42);
+	cnt_imp = ft_printf("%#010X\n", 42);
 	check_ft(printf_chars, cnt_imp);
-		printf_chars = printf("%#10x\n", 0);
-	cnt_imp = ft_printf("%#10x\n", 0);
+		printf_chars = printf("%#10X\n", 0);
+	cnt_imp = ft_printf("%#10X\n", 0);
 	check_ft(printf_chars, cnt_imp);
-	printf_chars = printf("%#10.0x\n", 0);
-	cnt_imp = ft_printf("%#10.0x\n", 0);
+	printf_chars = printf("%#10.0X\n", 0);
+	cnt_imp = ft_printf("%#10.0X\n", 0);
 	check_ft(printf_chars, cnt_imp);
 	printf_chars = printf("%#X\n", 42);
 	cnt_imp = ft_printf("%#X\n", 42);
@@ -512,8 +835,8 @@ int        main(void)
 	printf_chars = printf("%#010X\n", 42);
 	cnt_imp = ft_printf("%#010X\n", 42)	;
 	check_ft(printf_chars, cnt_imp);
-	printf_chars = printf("%#3.4x\n", 42);
-	cnt_imp = ft_printf("%#3.4x\n", 42)	;
+	printf_chars = printf("%#3.4X\n", 42);
+	cnt_imp = ft_printf("%#3.4X\n", 42)	;
 	check_ft(printf_chars, cnt_imp);
 	printf_chars = printf("%0+4i\n", 42);
 	cnt_imp = ft_printf("%0+4i\n", 42)	;
