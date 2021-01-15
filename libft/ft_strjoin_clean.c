@@ -3,14 +3,12 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin_clean.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: juasanto <juasanto@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jcsantos <jcsantos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/23 11:02:42 by juasanto          #+#    #+#             */
-/*   Updated: 2020/12/23 11:18:14 by juasanto         ###   ########.fr       */
+/*   Updated: 2021/01/15 11:34:46 by jcsantos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-/* Funcion INSPIRADA en conversación con BAZUARA */
 
 #include "libft.h"
 
