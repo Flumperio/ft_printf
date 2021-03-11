@@ -3,18 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   fn_printf_print.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jcsantos <jcsantos@student.42.fr>          +#+  +:+       +#+        */
+/*   By: juasanto <juasanto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/13 10:09:47 by juasanto          #+#    #+#             */
-/*   Updated: 2021/01/12 16:45:05 by jcsantos         ###   ########.fr       */
+/*   Updated: 2021/03/08 13:06:25 by juasanto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../../includes/ft_printf.h"
 
 void	fn_print_chk_s(t_parms *prn)
 {
-	if (prn->flag_p == 0 && prn->c_pre > 0 &&
+	if (prn->flag_p == 0 && prn->c_pre > 0 && \
 		prn->flag_w <= 0)
 	{
 		prn->args_temp = "";

@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   fn_printf_struct.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jcsantos <jcsantos@student.42.fr>          +#+  +:+       +#+        */
+/*   By: juasanto <juasanto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/19 09:55:21 by juasanto          #+#    #+#             */
-/*   Updated: 2021/01/12 17:12:56 by jcsantos         ###   ########.fr       */
+/*   Updated: 2021/02/18 12:48:56 by juasanto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../../includes/ft_printf.h"
 
 void	fn_reinicialize(t_parms *prn)
 {

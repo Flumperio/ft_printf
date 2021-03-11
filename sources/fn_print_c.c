@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   fn_print_c.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jcsantos <jcsantos@student.42.fr>          +#+  +:+       +#+        */
+/*   By: juasanto <juasanto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/21 16:42:45 by jcsantos          #+#    #+#             */
-/*   Updated: 2021/01/12 16:45:05 by jcsantos         ###   ########.fr       */
+/*   Updated: 2021/03/08 13:04:43 by juasanto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../../includes/ft_printf.h"
 
-void		fn_chek_align(t_parms *prn)
+void	fn_chek_align(t_parms *prn)
 {
 	if (prn->c_zero == 1 && prn->c_align == 0)
 		fill_str(prn->cs, prn->c_align, "0", prn);
@@ -21,7 +21,7 @@ void		fn_chek_align(t_parms *prn)
 	return ;
 }
 
-void		fn_check_p(t_parms *prn)
+void	fn_check_p(t_parms *prn)
 {
 	prn->cs = (prn->flag_w - prn->args_len);
 	if (prn->cf == '%')
@@ -29,7 +29,7 @@ void		fn_check_p(t_parms *prn)
 	return ;
 }
 
-void		fn_print_c(t_parms *prn)
+void	fn_print_c(t_parms *prn)
 {
 	int		tmp_len;
 	char	tmp_char;
